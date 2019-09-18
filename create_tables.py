@@ -4,12 +4,34 @@ from sql_queries import create_table_queries, drop_table_queries
 
 
 def drop_tables(cur, conn):
+    """
+    Drops all database tables (staging and data mart)
+    
+    Args:
+        cur(obj): cursor object
+        conn(obj): connection object
+        
+    Returns:
+        Nothing
+    """
+    
     for query in drop_table_queries:
         cur.execute(query)
         conn.commit()
 
 
 def create_tables(cur, conn):
+    """
+    Create all database tables (staging and data mart)
+    
+    Args:
+        cur(obj): cursor object
+        conn(obj): connection object
+        
+    Returns:
+        Nothing
+    """
+    
     for query in create_table_queries:
         cur.execute(query)
         conn.commit()
