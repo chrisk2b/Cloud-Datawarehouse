@@ -27,6 +27,8 @@ The following packages are necessary to run the scripts (cf. the "how to Execute
 
  - psycopg2
  - configparser
+ - pandas
+ - boto3
  
 The can be installed by using the requirements.txt file by using the command `pip install -r requirements.txt`
 
